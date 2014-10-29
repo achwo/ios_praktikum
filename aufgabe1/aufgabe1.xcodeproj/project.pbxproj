@@ -15,6 +15,7 @@
 		DCEA3F5E1A010999008A7D5B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEA3F5C1A010999008A7D5B /* LaunchScreen.xib */; };
 		DCEA3F6A1A01099A008A7D5B /* aufgabe1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEA3F691A01099A008A7D5B /* aufgabe1Tests.m */; };
 		DCF97F301A010E9F00F06EF4 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF97F2F1A010E9F00F06EF4 /* Contact.m */; };
+		DCF97F331A0111A300F06EF4 /* ContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF97F321A0111A300F06EF4 /* ContactManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		DCEA3F681A01099A008A7D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCEA3F691A01099A008A7D5B /* aufgabe1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = aufgabe1Tests.m; sourceTree = "<group>"; };
 		DCF97F2F1A010E9F00F06EF4 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		DCF97F311A01110F00F06EF4 /* ContactManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactManager.h; sourceTree = "<group>"; };
+		DCF97F321A0111A300F06EF4 /* ContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				DCEA3F4D1A010999008A7D5B /* Supporting Files */,
 				DC3831EB1A010C910049C855 /* Contact.h */,
 				DCF97F2F1A010E9F00F06EF4 /* Contact.m */,
+				DCF97F311A01110F00F06EF4 /* ContactManager.h */,
+				DCF97F321A0111A300F06EF4 /* ContactManager.m */,
 			);
 			path = aufgabe1;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF97F331A0111A300F06EF4 /* ContactManager.m in Sources */,
 				DCF97F301A010E9F00F06EF4 /* Contact.m in Sources */,
 				DCEA3F561A010999008A7D5B /* ViewController.m in Sources */,
 				DCEA3F531A010999008A7D5B /* AppDelegate.m in Sources */,
