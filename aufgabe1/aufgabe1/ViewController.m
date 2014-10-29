@@ -13,10 +13,23 @@
 @end
 
 @implementation ViewController
+- (IBAction)clickSave:(id)sender {
+    Contact *contact = [[Contact alloc] init];
+    contact.firstname = _fieldFirstname.text;
+    contact.lastname = _fieldLastname.text;
+    contact.email = _fieldMail.text;
+    
+    [_contactManager addContact:contact];
+    [_contactManager printList];
+    
+    _fieldFirstname.text = @"";
+    _fieldLastname.text = @"";
+    _fieldMail.text = @"";
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _contactManager = [[ContactManager alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {

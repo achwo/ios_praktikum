@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContactManager.h"
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *fieldFirstname;
+@property (weak, nonatomic) IBOutlet UITextField *fieldLastname;
+@property (weak, nonatomic) IBOutlet UITextField *fieldMail;
+@property (weak, nonatomic) IBOutlet UIButton *btnSaveContact;
+
+@property (strong, nonatomic) ContactManager *contactManager;
 
 @end
 
