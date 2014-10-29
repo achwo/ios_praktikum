@@ -14,6 +14,7 @@
 		DCEA3F5B1A010999008A7D5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCEA3F5A1A010999008A7D5B /* Images.xcassets */; };
 		DCEA3F5E1A010999008A7D5B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEA3F5C1A010999008A7D5B /* LaunchScreen.xib */; };
 		DCEA3F6A1A01099A008A7D5B /* aufgabe1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEA3F691A01099A008A7D5B /* aufgabe1Tests.m */; };
+		DCF97F301A010E9F00F06EF4 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF97F2F1A010E9F00F06EF4 /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC3831EB1A010C910049C855 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		DCEA3F4A1A010999008A7D5B /* aufgabe1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aufgabe1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEA3F4E1A010999008A7D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCEA3F4F1A010999008A7D5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		DCEA3F631A01099A008A7D5B /* aufgabe1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aufgabe1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEA3F681A01099A008A7D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCEA3F691A01099A008A7D5B /* aufgabe1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = aufgabe1Tests.m; sourceTree = "<group>"; };
+		DCF97F2F1A010E9F00F06EF4 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				DCEA3F5A1A010999008A7D5B /* Images.xcassets */,
 				DCEA3F5C1A010999008A7D5B /* LaunchScreen.xib */,
 				DCEA3F4D1A010999008A7D5B /* Supporting Files */,
+				DC3831EB1A010C910049C855 /* Contact.h */,
+				DCF97F2F1A010E9F00F06EF4 /* Contact.m */,
 			);
 			path = aufgabe1;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF97F301A010E9F00F06EF4 /* Contact.m in Sources */,
 				DCEA3F561A010999008A7D5B /* ViewController.m in Sources */,
 				DCEA3F531A010999008A7D5B /* AppDelegate.m in Sources */,
 				DCEA3F501A010999008A7D5B /* main.m in Sources */,
@@ -412,6 +418,7 @@
 				DCEA3F6F1A01099A008A7D5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCEA3F701A01099A008A7D5B /* Build configuration list for PBXNativeTarget "aufgabe1Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				DCEA3F721A01099A008A7D5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
