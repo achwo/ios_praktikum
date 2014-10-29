@@ -15,7 +15,7 @@
     if (self = [super init]) {
         _firstname = @"Vorname";
         _lastname = @"Nachname";
-        _email = @"vorname@nachname";
+        _mail = @"vorname@nachname";
     }
     return self;
 }

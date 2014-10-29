@@ -30,7 +30,7 @@
 {
     for(Contact* contact in _contacts)
     {
-        NSLog(@"%@", contact);
+        NSLog(@"%@ %@, %@", contact.firstname, contact.lastname, contact.mail);
     }
 }
 

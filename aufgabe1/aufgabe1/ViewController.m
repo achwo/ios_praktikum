@@ -17,7 +17,7 @@
     Contact *contact = [[Contact alloc] init];
     contact.firstname = _fieldFirstname.text;
     contact.lastname = _fieldLastname.text;
-    contact.email = _fieldMail.text;
+    contact.mail = _fieldMail.text;
     
     [_contactManager addContact:contact];
     [_contactManager printList];
