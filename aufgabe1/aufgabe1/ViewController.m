@@ -9,10 +9,11 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) ContactManager *contactManager;
 @end
 
 @implementation ViewController
+
 - (IBAction)clickSave:(id)sender {
     Contact *contact = [[Contact alloc] init];
     contact.firstname = _fieldFirstname.text;

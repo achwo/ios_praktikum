@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *fieldMail;
 @property (weak, nonatomic) IBOutlet UIButton *btnSaveContact;
 
-@property (strong, nonatomic) ContactManager *contactManager;
+
 
 @end
 

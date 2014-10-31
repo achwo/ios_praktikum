@@ -20,4 +20,9 @@
     return self;
 }
 
+-(NSString*)description
+{
+    return [NSString stringWithFormat:@"%@ %@, %@", _firstname, _lastname, _mail];
+}
+
 @end
