@@ -21,11 +21,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIBarButtonItem *addContactButton = [[UIBarButtonItem alloc]initWithTitle:@"Add Contact" style:UIBarButtonItemStylePlain target:self action:@selector(addContact:)];
+    // assign to the toolbar
+    self.toolbarItems = [[NSArray alloc]initWithObjects:addContactButton, nil];
+    // show toolbar
+    self.navigationController.toolbarHidden = NO;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(IBAction)addContact:(id)sender {
+    [self performSegueWithIdentifier:@"addContact" sender:self];
 }
 
 - (void)didReceiveMemoryWarning {
