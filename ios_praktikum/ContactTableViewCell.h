@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ContactTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *lastnameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *firstnameLabel;
 
