@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC1BF6531A260AAF00247A0F /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF6501A260AAF00247A0F /* Contact.m */; };
+		DC1BF6541A260AAF00247A0F /* ContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF6521A260AAF00247A0F /* ContactManager.m */; };
 		DC6C71CB1A2608410075E20F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C71CA1A2608410075E20F /* main.m */; };
 		DC6C71CE1A2608410075E20F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C71CD1A2608410075E20F /* AppDelegate.m */; };
 		DC6C71D11A2608410075E20F /* ios_praktikum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC6C71CF1A2608410075E20F /* ios_praktikum.xcdatamodeld */; };
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC1BF64F1A260AAF00247A0F /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		DC1BF6501A260AAF00247A0F /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		DC1BF6511A260AAF00247A0F /* ContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactManager.h; sourceTree = "<group>"; };
+		DC1BF6521A260AAF00247A0F /* ContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactManager.m; sourceTree = "<group>"; };
 		DC6C71C51A2608410075E20F /* ios_praktikum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_praktikum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6C71C91A2608410075E20F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6C71CA1A2608410075E20F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +89,10 @@
 		DC6C71C71A2608410075E20F /* ios_praktikum */ = {
 			isa = PBXGroup;
 			children = (
+				DC1BF64F1A260AAF00247A0F /* Contact.h */,
+				DC1BF6501A260AAF00247A0F /* Contact.m */,
+				DC1BF6511A260AAF00247A0F /* ContactManager.h */,
+				DC1BF6521A260AAF00247A0F /* ContactManager.m */,
 				DC6C71CC1A2608410075E20F /* AppDelegate.h */,
 				DC6C71CD1A2608410075E20F /* AppDelegate.m */,
 				DC6C71D21A2608410075E20F /* ViewController.h */,
@@ -224,7 +234,9 @@
 			files = (
 				DC6C71CE1A2608410075E20F /* AppDelegate.m in Sources */,
 				DC6C71CB1A2608410075E20F /* main.m in Sources */,
+				DC1BF6531A260AAF00247A0F /* Contact.m in Sources */,
 				DC6C71D41A2608410075E20F /* ViewController.m in Sources */,
+				DC1BF6541A260AAF00247A0F /* ContactManager.m in Sources */,
 				DC6C71D11A2608410075E20F /* ios_praktikum.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +428,7 @@
 				DC6C71ED1A2608410075E20F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC6C71EE1A2608410075E20F /* Build configuration list for PBXNativeTarget "ios_praktikumTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +437,7 @@
 				DC6C71F01A2608410075E20F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
