@@ -11,6 +11,8 @@
 		DC1BF6541A260AAF00247A0F /* ContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF6521A260AAF00247A0F /* ContactManager.m */; };
 		DC1BF6571A260FE600247A0F /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF6561A260FE600247A0F /* TableViewController.m */; };
 		DC1BF65E1A26187A00247A0F /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF65D1A26187A00247A0F /* ContactTableViewCell.m */; };
+		DC27CE9E1A2889AA00318FB8 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC27CE9D1A2889AA00318FB8 /* todo.txt */; };
+		DC27CEA41A2894E400318FB8 /* CancelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27CEA31A2894E400318FB8 /* CancelButton.m */; };
 		DC6C71CB1A2608410075E20F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C71CA1A2608410075E20F /* main.m */; };
 		DC6C71CE1A2608410075E20F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C71CD1A2608410075E20F /* AppDelegate.m */; };
 		DC6C71D11A2608410075E20F /* ios_praktikum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC6C71CF1A2608410075E20F /* ios_praktikum.xcdatamodeld */; };
@@ -40,6 +42,9 @@
 		DC1BF6561A260FE600247A0F /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		DC1BF65C1A26187A00247A0F /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
 		DC1BF65D1A26187A00247A0F /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
+		DC27CE9D1A2889AA00318FB8 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
+		DC27CEA21A2894E400318FB8 /* CancelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelButton.h; sourceTree = "<group>"; };
+		DC27CEA31A2894E400318FB8 /* CancelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelButton.m; sourceTree = "<group>"; };
 		DC6C71C51A2608410075E20F /* ios_praktikum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_praktikum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6C71C91A2608410075E20F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6C71CA1A2608410075E20F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 		DC6C71BC1A2608410075E20F = {
 			isa = PBXGroup;
 			children = (
+				DC27CE9D1A2889AA00318FB8 /* todo.txt */,
 				DC6C71C71A2608410075E20F /* ios_praktikum */,
 				DC6C71E41A2608410075E20F /* ios_praktikumTests */,
 				DC6C71C61A2608410075E20F /* Products */,
@@ -112,6 +118,8 @@
 				DC1BF6561A260FE600247A0F /* TableViewController.m */,
 				DC1BF65C1A26187A00247A0F /* ContactTableViewCell.h */,
 				DC1BF65D1A26187A00247A0F /* ContactTableViewCell.m */,
+				DC27CEA21A2894E400318FB8 /* CancelButton.h */,
+				DC27CEA31A2894E400318FB8 /* CancelButton.m */,
 			);
 			path = ios_praktikum;
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC27CE9E1A2889AA00318FB8 /* todo.txt in Resources */,
 				DC6C71D71A2608410075E20F /* Main.storyboard in Resources */,
 				DC6C71DC1A2608410075E20F /* LaunchScreen.xib in Resources */,
 				DC6C71D91A2608410075E20F /* Images.xcassets in Resources */,
@@ -245,6 +254,7 @@
 				DC1BF65E1A26187A00247A0F /* ContactTableViewCell.m in Sources */,
 				DC6C71CE1A2608410075E20F /* AppDelegate.m in Sources */,
 				DC6C71CB1A2608410075E20F /* main.m in Sources */,
+				DC27CEA41A2894E400318FB8 /* CancelButton.m in Sources */,
 				DC1BF6531A260AAF00247A0F /* Contact.m in Sources */,
 				DC6C71D41A2608410075E20F /* ViewController.m in Sources */,
 				DC1BF6541A260AAF00247A0F /* ContactManager.m in Sources */,
