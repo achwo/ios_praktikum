@@ -16,7 +16,7 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 - (void)addContact:(NSString*)firstname withLastname:(NSString*)lastname andMail:(NSString*)mail;
-- (void)addContact:(Contact*)contact;
+- (void)changeContact:(Contact*)contact;
 - (Contact*)getContact:(NSInteger)index;
 - (NSUInteger)size;
 - (void)saveContext;

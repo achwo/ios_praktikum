@@ -20,7 +20,7 @@
         _contact.lastname = _fieldLastname.text;
         _contact.mail = _fieldMail.text;
         
-        [self.delegate saveContact:_contact];
+        [self.delegate changeContact:_contact];
     } else {
     
         [self.delegate saveContact:_fieldFirstname.text withLastname:_fieldLastname.text andMail:_fieldMail.text];

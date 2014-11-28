@@ -14,7 +14,7 @@
 @protocol SaveContactDelegate<NSObject>
 
 -(void)saveContact:(NSString*)firstname withLastname:(NSString*)lastname andMail:(NSString*)mail;
--(void)saveContact:(Contact *)contact;
+-(void)changeContact:(Contact *)contact;
 
 @end
 

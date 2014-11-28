@@ -62,7 +62,7 @@
     [_contacts addObject:(Contact*)newContact];
 }
 
--(void)addContact:(Contact*) contact
+-(void)changeContact:(Contact*) contact
 {
     [self saveContext];
 }

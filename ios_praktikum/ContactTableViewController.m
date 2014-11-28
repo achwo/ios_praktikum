@@ -45,9 +45,9 @@
     [_contactManager addContact:firstname withLastname:lastname andMail:mail];
 }
 
--(void)saveContact:(Contact *)contact
+-(void)changeContact:(Contact *)contact
 {
-    [_contactManager addContact:contact];
+    [_contactManager changeContact:contact];
     [self.tableView reloadData];
 }
 
