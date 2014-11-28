@@ -1,6 +1,3 @@
-- New Contact - Save Button leads back to main view
 - Edit Contact
-- Cancel Button for New/Edit Contact
-- Migrate Contact Class to Core Data
 - Load Database Data in Table View (startup)
 - Load Contact Data into Edit Contact

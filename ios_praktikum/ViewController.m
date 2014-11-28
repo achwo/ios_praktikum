@@ -9,28 +9,24 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (strong, nonatomic) ContactManager *contactManager;
 @end
 
 @implementation ViewController
 
 - (IBAction)clickSave:(id)sender {
-    Contact *contact = [[Contact alloc] init];
-    contact.firstname = _fieldFirstname.text;
-    contact.lastname = _fieldLastname.text;
-    contact.mail = _fieldMail.text;
     
-    [_contactManager addContact:contact];
-    [_contactManager printList];
+    [self.delegate saveContact:_fieldFirstname.text withLastname:_fieldLastname.text andMail:_fieldMail.text];
     
     _fieldFirstname.text = @"";
     _fieldLastname.text = @"";
     _fieldMail.text = @"";
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _contactManager = [[ContactManager alloc]init];
+
 }
 
 - (void)didReceiveMemoryWarning {

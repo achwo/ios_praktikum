@@ -9,11 +9,11 @@
 #import "TableViewController.h"
 #import "ContactTableViewCell.h"
 #import "ContactManager.h"
+#import "ViewController.h"
 
 @interface TableViewController ()
 
 @property (strong, nonatomic) ContactManager *contactManager;
-
 @end
 
 @implementation TableViewController
@@ -27,6 +27,8 @@
     // show toolbar
     self.navigationController.toolbarHidden = NO;
     
+    _contactManager = [[ContactManager alloc]init];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -36,6 +38,11 @@
 
 -(IBAction)addContact:(id)sender {
     [self performSegueWithIdentifier:@"addContact" sender:self];
+}
+
+-(void)saveContact:(NSString *)firstname withLastname:(NSString *)lastname andMail:(NSString *)mail
+{
+    [_contactManager addContact:firstname withLastname:lastname andMail:mail];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,14 +59,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 5;
+    return [_contactManager size];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ContactTableViewCell *cell = (ContactTableViewCell*) [tableView dequeueReusableCellWithIdentifier:@"Contact Cell" forIndexPath:indexPath];
     
-    cell.firstnameLabel.text = @"Hinnerk-Gesicht der Erste";
-    cell.lastnameLabel.text = @"Hännäng";
+    Contact *contact = [_contactManager getContact:indexPath.row];
+    
+    cell.firstnameLabel.text = contact.firstname;
+    cell.lastnameLabel.text = contact.lastname;
     
     return cell;
 }
@@ -99,14 +108,17 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    ViewController *controller = (ViewController*)[segue destinationViewController];
+    
+    controller.delegate = self;
+
 }
-*/
+
 
 @end

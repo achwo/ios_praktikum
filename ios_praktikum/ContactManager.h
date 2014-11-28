@@ -11,8 +11,17 @@
 @interface ContactManager : NSObject
 
 @property (nonatomic, strong) NSMutableArray *contacts;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
--(void)addContact:(Contact*)contact;
--(void)printList;
+- (void)addContact:(NSString*)firstname withLastname:(NSString*)lastname andMail:(NSString*)mail;
+- (Contact*)getContact:(NSInteger)index;
+- (NSUInteger)size;
+- (void)printList;
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
+
+
 
 @end
