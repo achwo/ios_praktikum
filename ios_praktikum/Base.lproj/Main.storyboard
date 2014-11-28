@@ -79,7 +79,7 @@
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="LLR-g1-sRc" id="udh-ro-ADp"/>
-                            <outlet property="delegate" destination="LLR-g1-sRc" id="hOb-6X-zFK"/>
+                            <outlet property="delegate" destination="LLR-g1-sRc" id="G21-dB-Rfg"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="S9p-Kc-eEo"/>

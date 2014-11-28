@@ -106,14 +106,14 @@
 				DC1BF6521A260AAF00247A0F /* ContactManager.m */,
 				DC1BF65C1A26187A00247A0F /* ContactTableViewCell.h */,
 				DC1BF65D1A26187A00247A0F /* ContactTableViewCell.m */,
-				DC6C71D21A2608410075E20F /* SaveContactViewController.h */,
-				DC6C71D31A2608410075E20F /* SaveContactViewController.m */,
-				DC6C71D51A2608410075E20F /* Main.storyboard */,
 				DC1BF6551A260FE600247A0F /* ContactTableViewController.h */,
 				DC1BF6561A260FE600247A0F /* ContactTableViewController.m */,
-				DC6C71CF1A2608410075E20F /* ios_praktikum.xcdatamodeld */,
+				DC6C71D21A2608410075E20F /* SaveContactViewController.h */,
+				DC6C71D31A2608410075E20F /* SaveContactViewController.m */,
 				DC6C71D81A2608410075E20F /* Images.xcassets */,
+				DC6C71CF1A2608410075E20F /* ios_praktikum.xcdatamodeld */,
 				DC6C71DA1A2608410075E20F /* LaunchScreen.xib */,
+				DC6C71D51A2608410075E20F /* Main.storyboard */,
 				DC6C71C81A2608410075E20F /* Supporting Files */,
 			);
 			path = ios_praktikum;

@@ -14,6 +14,7 @@
 @protocol SaveContactDelegate<NSObject>
 
 -(void)saveContact:(NSString*)firstname withLastname:(NSString*)lastname andMail:(NSString*)mail;
+-(void)saveContact:(Contact *)contact;
 
 @end
 
@@ -25,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSaveContact;
 
 @property(nonatomic, strong) id<SaveContactDelegate> delegate;
+@property(nonatomic, strong) Contact *contact;
 
 @end
 

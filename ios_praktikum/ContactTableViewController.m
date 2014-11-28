@@ -45,6 +45,12 @@
     [_contactManager addContact:firstname withLastname:lastname andMail:mail];
 }
 
+-(void)saveContact:(Contact *)contact
+{
+    [_contactManager addContact:contact];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -71,6 +77,12 @@
     cell.lastnameLabel.text = contact.lastname;
     
     return cell;
+}
+
+-(void) tableView:(UITableView*) tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"addContact" sender:self];
+    
 }
 
 
@@ -116,8 +128,13 @@
     // Pass the selected object to the new view controller.
     SaveContactViewController *controller = (SaveContactViewController*)[segue destinationViewController];
     
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    if (path.length > 0)
+    {
+        controller.contact = [_contactManager getContact:path.row];
+    }
+    
     controller.delegate = self;
-
 }
 
 

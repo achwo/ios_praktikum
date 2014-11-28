@@ -44,6 +44,8 @@
     if (fetchedObjects == nil || error)
     {
     }
+    
+    [_contacts addObjectsFromArray:fetchedObjects];
 }
 
 -(void)addContact:(NSString*)firstname withLastname:(NSString *)lastname andMail:(NSString *)mail
@@ -58,6 +60,11 @@
     [self saveContext];
     
     [_contacts addObject:(Contact*)newContact];
+}
+
+-(void)addContact:(Contact*) contact
+{
+    [self saveContext];
 }
 
 -(Contact*)getContact:(NSInteger)index
