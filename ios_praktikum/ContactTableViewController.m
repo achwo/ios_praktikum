@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Felix Jensen. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "ContactTableViewController.h"
 #import "ContactTableViewCell.h"
 #import "ContactManager.h"
-#import "ViewController.h"
+#import "SaveContactViewController.h"
 
-@interface TableViewController ()
+@interface ContactTableViewController ()
 
 @property (strong, nonatomic) ContactManager *contactManager;
 @end
 
-@implementation TableViewController
+@implementation ContactTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -114,7 +114,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    ViewController *controller = (ViewController*)[segue destinationViewController];
+    SaveContactViewController *controller = (SaveContactViewController*)[segue destinationViewController];
     
     controller.delegate = self;
 

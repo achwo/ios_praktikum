@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
+#import "SaveContactViewController.h"
 
 
-@interface TableViewController : UITableViewController<SaveContactDelegate>
+@interface ContactTableViewController : UITableViewController<SaveContactDelegate>
 @end

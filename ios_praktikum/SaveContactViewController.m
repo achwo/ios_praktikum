@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 Felix Jensen. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SaveContactViewController.h"
 
-@interface ViewController ()
+@interface SaveContactViewController ()
 @end
 
-@implementation ViewController
+@implementation SaveContactViewController
 
 - (IBAction)clickSave:(id)sender {
     

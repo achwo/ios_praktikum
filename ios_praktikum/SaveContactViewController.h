@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ContactManager.h"
 
-@class ViewController;
+@class SaveContactViewController;
 
 @protocol SaveContactDelegate<NSObject>
 
@@ -17,7 +17,7 @@
 
 @end
 
-@interface ViewController : UIViewController
+@interface SaveContactViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *fieldFirstname;
 @property (weak, nonatomic) IBOutlet UITextField *fieldLastname;
