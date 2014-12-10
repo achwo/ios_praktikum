@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblFirstname;
 @property (weak, nonatomic) IBOutlet UILabel *lblLastname;
 @property (weak, nonatomic) IBOutlet UILabel *lblMail;
-@property (weak, nonatomic) IBOutlet UIButton *buttonSave;
 @property (weak, nonatomic) IBOutlet UILabel *lblUrl;
 
 @end
@@ -50,7 +49,10 @@
     self.lblLastname.text = NSLocalizedString(kLastname, nil);
     self.lblMail.text = NSLocalizedString(kMail, nil);
     self.lblUrl.text = NSLocalizedString(kUrl, nil);
-    [self.buttonSave setTitle:NSLocalizedString(kSave, nil) forState:UIControlStateNormal];
+    
+    self.navigationItem.title = NSLocalizedString(kContact, nil);
+    self.navigationItem.rightBarButtonItem =
+    [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(clickSave:)];
     
     
     if (_contact) {

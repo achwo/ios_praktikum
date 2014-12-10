@@ -25,8 +25,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *fieldMail;
 @property (weak, nonatomic) IBOutlet UITextField *fieldUrl;
 
-@property (weak, nonatomic) IBOutlet UIButton *btnSaveContact;
-
 @property(nonatomic, strong) id<SaveContactDelegate> delegate;
 @property(nonatomic, strong) Contact *contact;
 

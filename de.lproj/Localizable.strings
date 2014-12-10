@@ -10,5 +10,5 @@
 "lastname" = "!Last Name";
 "mail" = "!Mail";
 "url" = "!Image URL";
-"save" = "!Save";
 "addContact" = "!Add Contact";
+"contact" = "!Contact";

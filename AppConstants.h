@@ -12,5 +12,5 @@ FOUNDATION_EXPORT NSString* const kFirstname;
 FOUNDATION_EXPORT NSString* const kLastname;
 FOUNDATION_EXPORT NSString* const kMail;
 FOUNDATION_EXPORT NSString* const kUrl;
-FOUNDATION_EXPORT NSString* const kSave;
 FOUNDATION_EXPORT NSString* const kAddContact;
+FOUNDATION_EXPORT NSString* const kContact;
