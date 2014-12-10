@@ -48,7 +48,7 @@
     [_contacts addObjectsFromArray:fetchedObjects];
 }
 
--(void)addContact:(NSString*)firstname withLastname:(NSString *)lastname andMail:(NSString *)mail
+-(void)addContact:(NSString*)firstname withLastname:(NSString *)lastname andMail:(NSString *)mail andUrl:(NSString *)url
 {
     Contact *newContact = [NSEntityDescription
                            insertNewObjectForEntityForName:@"Contact"
@@ -57,6 +57,7 @@
     newContact.firstname = firstname;
     newContact.lastname = lastname;
     newContact.mail = mail;
+    newContact.image = url;
     [self saveContext];
     
     [_contacts addObject:(Contact*)newContact];
@@ -75,14 +76,6 @@
 -(NSUInteger)size
 {
     return [_contacts count];
-}
-
--(void)printList
-{
-    for(Contact* contact in _contacts)
-    {
-        NSLog(@"%@", contact);
-    }
 }
 
 #pragma mark - Core Data stack

@@ -15,7 +15,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (void)addContact:(NSString*)firstname withLastname:(NSString*)lastname andMail:(NSString*)mail;
+- (void)addContact:(NSString*)firstname withLastname:(NSString*)lastname andMail:(NSString*)mail andUrl:(NSString*)url;
 - (void)changeContact:(Contact*)contact;
 - (Contact*)getContact:(NSInteger)index;
 - (NSUInteger)size;

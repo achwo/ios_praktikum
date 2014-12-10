@@ -13,7 +13,7 @@
 
 @protocol SaveContactDelegate<NSObject>
 
--(void)saveContact:(NSString*)firstname withLastname:(NSString*)lastname andMail:(NSString*)mail;
+-(void)saveContact:(NSString*)firstname withLastname:(NSString*)lastname andMail:(NSString*)mail andUrl:(NSString*)url;
 -(void)changeContact:(Contact *)contact;
 
 @end

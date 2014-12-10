@@ -11,6 +11,7 @@
 NSString* const kFirstname = @"firstname";
 NSString* const kLastname = @"lastname";
 NSString* const kMail = @"mail";
+NSString* const kUrl = @"url";
 NSString* const kSave = @"save";
 NSString* const kAddContact = @"addContact";
 

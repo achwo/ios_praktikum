@@ -44,8 +44,9 @@
 }
 
 -(void)saveContact:(NSString *)firstname withLastname:(NSString *)lastname andMail:(NSString *)mail
+            andUrl:(NSString *)url
 {
-    [_contactManager addContact:firstname withLastname:lastname andMail:mail];
+    [_contactManager addContact:firstname withLastname:lastname andMail:mail andUrl:url];
 }
 
 -(void)changeContact:(Contact *)contact
