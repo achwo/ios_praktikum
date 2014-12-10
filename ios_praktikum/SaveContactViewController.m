@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblLastname;
 @property (weak, nonatomic) IBOutlet UILabel *lblMail;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSave;
+@property (weak, nonatomic) IBOutlet UILabel *lblUrl;
 
 @end
 
