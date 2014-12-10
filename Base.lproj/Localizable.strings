@@ -1,0 +1,13 @@
+/* 
+  Localized.strings
+  ios_praktikum
+
+  Created by Felix Jensen on 10.12.14.
+  Copyright (c) 2014 Felix Jensen. All rights reserved.
+*/
+
+"firstname" = "First Name";
+"lastname" = "Last Name";
+"mail" = "Mail";
+"save" = "Save";
+"addContact" = "Add Contact";

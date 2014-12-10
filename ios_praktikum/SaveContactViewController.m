@@ -7,8 +7,14 @@
 //
 
 #import "SaveContactViewController.h"
+#import "AppConstants.h"
 
 @interface SaveContactViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lblFirstname;
+@property (weak, nonatomic) IBOutlet UILabel *lblLastname;
+@property (weak, nonatomic) IBOutlet UILabel *lblMail;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSave;
+
 @end
 
 @implementation SaveContactViewController
@@ -35,6 +41,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    self.lblFirstname.text = NSLocalizedString(kFirstname, nil);
+    self.lblLastname.text = NSLocalizedString(kLastname, nil);
+    self.lblMail.text = NSLocalizedString(kMail, nil);
+    [self.buttonSave setTitle:NSLocalizedString(kSave, nil) forState:UIControlStateNormal];
+    
     
     if (_contact) {
         _fieldFirstname.text = _contact.firstname;

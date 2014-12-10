@@ -10,6 +10,7 @@
 		DC1BF6541A260AAF00247A0F /* ContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF6521A260AAF00247A0F /* ContactManager.m */; };
 		DC1BF6571A260FE600247A0F /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF6561A260FE600247A0F /* ContactTableViewController.m */; };
 		DC1BF65E1A26187A00247A0F /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF65D1A26187A00247A0F /* ContactTableViewCell.m */; };
+		DC2395301A38748C00AA46BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2395321A38748C00AA46BF /* Localizable.strings */; };
 		DC27CE9E1A2889AA00318FB8 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC27CE9D1A2889AA00318FB8 /* todo.txt */; };
 		DC27CEA71A28973C00318FB8 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27CEA61A28973C00318FB8 /* Contact.m */; };
 		DC6C71CB1A2608410075E20F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C71CA1A2608410075E20F /* main.m */; };
@@ -20,6 +21,7 @@
 		DC6C71D91A2608410075E20F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6C71D81A2608410075E20F /* Images.xcassets */; };
 		DC6C71DC1A2608410075E20F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC6C71DA1A2608410075E20F /* LaunchScreen.xib */; };
 		DC6C71E81A2608410075E20F /* ios_praktikumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C71E71A2608410075E20F /* ios_praktikumTests.m */; };
+		DC77A9681A387CC5005C5A07 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC77A9671A387CC5005C5A07 /* AppConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		DC1BF6561A260FE600247A0F /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
 		DC1BF65C1A26187A00247A0F /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
 		DC1BF65D1A26187A00247A0F /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
+		DC2395311A38748C00AA46BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC2395331A38749A00AA46BF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DC27CE9D1A2889AA00318FB8 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		DC27CEA51A28973C00318FB8 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		DC27CEA61A28973C00318FB8 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		DC6C71E11A2608410075E20F /* ios_praktikumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_praktikumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6C71E61A2608410075E20F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6C71E71A2608410075E20F /* ios_praktikumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_praktikumTests.m; sourceTree = "<group>"; };
+		DC77A9661A387CC5005C5A07 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		DC77A9671A387CC5005C5A07 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 		DC6C71BC1A2608410075E20F = {
 			isa = PBXGroup;
 			children = (
+				DC77A9661A387CC5005C5A07 /* AppConstants.h */,
+				DC77A9671A387CC5005C5A07 /* AppConstants.m */,
 				DC27CE9D1A2889AA00318FB8 /* todo.txt */,
 				DC6C71C71A2608410075E20F /* ios_praktikum */,
 				DC6C71E41A2608410075E20F /* ios_praktikumTests */,
@@ -98,6 +106,7 @@
 		DC6C71C71A2608410075E20F /* ios_praktikum */ = {
 			isa = PBXGroup;
 			children = (
+				DC2395321A38748C00AA46BF /* Localizable.strings */,
 				DC6C71CC1A2608410075E20F /* AppDelegate.h */,
 				DC6C71CD1A2608410075E20F /* AppDelegate.m */,
 				DC27CEA51A28973C00318FB8 /* Contact.h */,
@@ -208,6 +217,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = DC6C71BC1A2608410075E20F;
 			productRefGroup = DC6C71C61A2608410075E20F /* Products */;
@@ -227,6 +237,7 @@
 			files = (
 				DC27CE9E1A2889AA00318FB8 /* todo.txt in Resources */,
 				DC6C71D71A2608410075E20F /* Main.storyboard in Resources */,
+				DC2395301A38748C00AA46BF /* Localizable.strings in Resources */,
 				DC6C71DC1A2608410075E20F /* LaunchScreen.xib in Resources */,
 				DC6C71D91A2608410075E20F /* Images.xcassets in Resources */,
 			);
@@ -252,6 +263,7 @@
 				DC6C71CB1A2608410075E20F /* main.m in Sources */,
 				DC6C71D41A2608410075E20F /* SaveContactViewController.m in Sources */,
 				DC1BF6541A260AAF00247A0F /* ContactManager.m in Sources */,
+				DC77A9681A387CC5005C5A07 /* AppConstants.m in Sources */,
 				DC1BF6571A260FE600247A0F /* ContactTableViewController.m in Sources */,
 				DC6C71D11A2608410075E20F /* ios_praktikum.xcdatamodeld in Sources */,
 			);
@@ -276,6 +288,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DC2395321A38748C00AA46BF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC2395311A38748C00AA46BF /* Base */,
+				DC2395331A38749A00AA46BF /* de */,
+			);
+			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		DC6C71D51A2608410075E20F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

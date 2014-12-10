@@ -10,6 +10,7 @@
 #import "ContactTableViewCell.h"
 #import "ContactManager.h"
 #import "SaveContactViewController.h"
+#import "AppConstants.h"
 
 @interface ContactTableViewController ()
 
@@ -21,7 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIBarButtonItem *addContactButton = [[UIBarButtonItem alloc]initWithTitle:@"Add Contact" style:UIBarButtonItemStylePlain target:self action:@selector(addContact:)];
+    NSString* addContact = NSLocalizedString(kAddContact, nil);
+    
+    UIBarButtonItem *addContactButton = [[UIBarButtonItem alloc]initWithTitle:addContact style:UIBarButtonItemStylePlain target:self action:@selector(addContact:)];
     // assign to the toolbar
     self.toolbarItems = [[NSArray alloc]initWithObjects:addContactButton, nil];
     // show toolbar
