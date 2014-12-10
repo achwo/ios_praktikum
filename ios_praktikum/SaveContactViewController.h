@@ -18,12 +18,13 @@
 
 @end
 
-@interface SaveContactViewController : UIViewController
+@interface SaveContactViewController : UIViewController<NSURLSessionDownloadDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *fieldFirstname;
 @property (weak, nonatomic) IBOutlet UITextField *fieldLastname;
 @property (weak, nonatomic) IBOutlet UITextField *fieldMail;
 @property (weak, nonatomic) IBOutlet UITextField *fieldUrl;
+@property (weak, nonatomic) IBOutlet UIImageView *image;
 
 @property(nonatomic, strong) id<SaveContactDelegate> delegate;
 @property(nonatomic, strong) Contact *contact;

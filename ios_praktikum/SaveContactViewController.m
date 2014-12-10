@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblLastname;
 @property (weak, nonatomic) IBOutlet UILabel *lblMail;
 @property (weak, nonatomic) IBOutlet UILabel *lblUrl;
+@property (strong, nonatomic) NSURLSessionConfiguration *backgroundConfigObject;
 
 @end
 
@@ -44,6 +45,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _backgroundConfigObject = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"myBackgroundSessionIdentifier"];
+    
     
     self.lblFirstname.text = NSLocalizedString(kFirstname, nil);
     self.lblLastname.text = NSLocalizedString(kLastname, nil);
@@ -60,9 +63,27 @@
         _fieldLastname.text = _contact.lastname;
         _fieldMail.text = _contact.mail;
         _fieldUrl.text = _contact.image;
+        
+        [self downloadTaskWithUrl:_contact.image];
     }
 
 }
+
+-(void)downloadTaskWithUrl:(NSString*)url {
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:_backgroundConfigObject delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    
+    NSURL *fileUrl = [NSURL URLWithString:url];
+    
+    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:fileUrl];
+    [downloadTask resume];
+}
+
+-(void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location
+{
+    UIImage* img = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:location.absoluteString]]];
+    [_image setImage:img];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

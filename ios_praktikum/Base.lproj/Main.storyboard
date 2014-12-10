@@ -339,6 +339,7 @@
                         <outlet property="fieldLastname" destination="cNV-mj-C1u" id="hMT-ao-IWq"/>
                         <outlet property="fieldMail" destination="ieE-uF-PcA" id="iVB-oY-WHE"/>
                         <outlet property="fieldUrl" destination="ha0-1r-erj" id="BD9-QG-ibW"/>
+                        <outlet property="image" destination="L1V-Th-ceT" id="OkZ-Cs-XvY"/>
                         <outlet property="lblFirstname" destination="P9g-bK-L3f" id="tSd-Tr-JOL"/>
                         <outlet property="lblLastname" destination="xK3-6K-FFc" id="SH0-Tb-Lwu"/>
                         <outlet property="lblMail" destination="pik-if-MJd" id="ZUq-ed-N5c"/>
