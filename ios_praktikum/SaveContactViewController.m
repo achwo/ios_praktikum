@@ -14,13 +14,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblLastname;
 @property (weak, nonatomic) IBOutlet UILabel *lblMail;
 @property (weak, nonatomic) IBOutlet UILabel *lblUrl;
-@property (strong, nonatomic) NSURLSessionConfiguration *backgroundConfigObject;
 
 @end
 
 @implementation SaveContactViewController
 
 - (IBAction)clickSave:(id)sender {
+    
+    [self downloadTaskWithUrl:_contact.image];
     
     if(_contact) {
         _contact.firstname = _fieldFirstname.text;
@@ -32,21 +33,18 @@
     } else {
     
         [self.delegate saveContact:_fieldFirstname.text withLastname:_fieldLastname.text andMail:_fieldMail.text andUrl:_fieldUrl.text];
-    
-        _fieldFirstname.text = @"";
-        _fieldLastname.text = @"";
-        _fieldMail.text = @"";
-        _fieldUrl.text = @"";
+//    
+//        _fieldFirstname.text = @"";
+//        _fieldLastname.text = @"";
+//        _fieldMail.text = @"";
+//        _fieldUrl.text = @"";
     
     }
-    [self.navigationController popViewControllerAnimated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _backgroundConfigObject = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"myBackgroundSessionIdentifier"];
-    
     
     self.lblFirstname.text = NSLocalizedString(kFirstname, nil);
     self.lblLastname.text = NSLocalizedString(kLastname, nil);
@@ -70,7 +68,8 @@
 }
 
 -(void)downloadTaskWithUrl:(NSString*)url {
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:_backgroundConfigObject delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionConfiguration *backgroundConfigObject = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"myBackgroundSessionIdentifier"];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:backgroundConfigObject delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     
     NSURL *fileUrl = [NSURL URLWithString:url];
     
@@ -82,6 +81,8 @@
 {
     UIImage* img = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:location.absoluteString]]];
     [_image setImage:img];
+    
+    [session finishTasksAndInvalidate];
 }
 
 
