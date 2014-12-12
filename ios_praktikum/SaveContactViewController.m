@@ -8,16 +8,26 @@
 
 #import "SaveContactViewController.h"
 #import "AppConstants.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface SaveContactViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblFirstname;
 @property (weak, nonatomic) IBOutlet UILabel *lblLastname;
 @property (weak, nonatomic) IBOutlet UILabel *lblMail;
 @property (weak, nonatomic) IBOutlet UILabel *lblUrl;
+@property (weak, nonatomic) IBOutlet UILabel *lblNetworkingFramework;
 
 @end
 
 @implementation SaveContactViewController
+- (IBAction)toggleNetworkingFramework:(id)sender {
+    if([_toggleNetwork isOn]) {
+        _lblNetworkingFramework.text = kAFNetworking;
+    } else {
+        _lblNetworkingFramework.text = kNSURLSession;
+    }
+    
+}
 
 - (IBAction)clickSave:(id)sender {
     
@@ -31,16 +41,8 @@
         
         [self.delegate changeContact:_contact];
     } else {
-    
-        [self.delegate saveContact:_fieldFirstname.text withLastname:_fieldLastname.text andMail:_fieldMail.text andUrl:_fieldUrl.text];
-//    
-//        _fieldFirstname.text = @"";
-//        _fieldLastname.text = @"";
-//        _fieldMail.text = @"";
-//        _fieldUrl.text = @"";
-    
+        _contact = [self.delegate saveContact:_fieldFirstname.text withLastname:_fieldLastname.text andMail:_fieldMail.text andUrl:_fieldUrl.text];
     }
-//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {
@@ -55,16 +57,39 @@
     self.navigationItem.rightBarButtonItem =
     [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(clickSave:)];
     
-    
     if (_contact) {
         _fieldFirstname.text = _contact.firstname;
         _fieldLastname.text = _contact.lastname;
         _fieldMail.text = _contact.mail;
         _fieldUrl.text = _contact.image;
         
+        [self loadImage:_contact.image];
+    }
+}
+
+-(void)loadImage:(NSString*)imageUrl {
+    if([_toggleNetwork isOn]) { // AFNetworking
+        [self loadImageThroughAFNetworkingWithUrl:_contact.image];
+    } else { // NSURlSession
         [self downloadTaskWithUrl:_contact.image];
     }
+}
 
+-(void)loadImageThroughAFNetworkingWithUrl:(NSString*)imageUrl {
+    NSURL *url = [NSURL URLWithString:imageUrl];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        UIImage *image = [UIImage imageWithData:responseObject];
+        [_image setImage:image];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
+    [operation start];
 }
 
 -(void)downloadTaskWithUrl:(NSString*)url {

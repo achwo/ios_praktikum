@@ -15,4 +15,6 @@ NSString* const kUrl = @"url";
 NSString* const kAddContact = @"addContact";
 NSString* const kContact = @"contact";
 
+NSString* const kNSURLSession = @"NSURLSession";
+NSString* const kAFNetworking = @"AFNetworking";
 

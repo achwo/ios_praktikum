@@ -162,8 +162,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K8G-Ye-S4p">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K8G-Ye-S4p">
                                 <rect key="frame" x="535" y="220" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleNetworkingFramework:" destination="vXZ-lx-hvc" eventType="valueChanged" id="gn6-By-l5s"/>
+                                </connections>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJD-hq-2h3"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L1V-Th-ceT">
@@ -173,7 +176,7 @@
                                     <constraint firstAttribute="width" constant="343" id="Nxg-NN-Mo0"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NSURLSession" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGQ-fr-eqc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AFNetworking" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGQ-fr-eqc">
                                 <rect key="frame" x="403" y="225" width="124" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="nhO-c8-JvJ"/>
@@ -343,7 +346,9 @@
                         <outlet property="lblFirstname" destination="P9g-bK-L3f" id="tSd-Tr-JOL"/>
                         <outlet property="lblLastname" destination="xK3-6K-FFc" id="SH0-Tb-Lwu"/>
                         <outlet property="lblMail" destination="pik-if-MJd" id="ZUq-ed-N5c"/>
+                        <outlet property="lblNetworkingFramework" destination="MGQ-fr-eqc" id="Vv0-1M-DsA"/>
                         <outlet property="lblUrl" destination="Mkt-FP-MRg" id="idk-Sd-wpe"/>
+                        <outlet property="toggleNetwork" destination="K8G-Ye-S4p" id="KLd-KG-ji0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

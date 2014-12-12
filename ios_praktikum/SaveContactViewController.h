@@ -13,7 +13,7 @@
 
 @protocol SaveContactDelegate<NSObject>
 
--(void)saveContact:(NSString*)firstname withLastname:(NSString*)lastname andMail:(NSString*)mail andUrl:(NSString*)url;
+-(Contact*)saveContact:(NSString*)firstname withLastname:(NSString*)lastname andMail:(NSString*)mail andUrl:(NSString*)url;
 -(void)changeContact:(Contact *)contact;
 
 @end
@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *fieldMail;
 @property (weak, nonatomic) IBOutlet UITextField *fieldUrl;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UISwitch *toggleNetwork;
 
 @property(nonatomic, strong) id<SaveContactDelegate> delegate;
 @property(nonatomic, strong) Contact *contact;

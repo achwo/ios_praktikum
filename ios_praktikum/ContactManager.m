@@ -48,7 +48,7 @@
     [_contacts addObjectsFromArray:fetchedObjects];
 }
 
--(void)addContact:(NSString*)firstname withLastname:(NSString *)lastname andMail:(NSString *)mail andUrl:(NSString *)url
+-(NSInteger)addContact:(NSString*)firstname withLastname:(NSString *)lastname andMail:(NSString *)mail andUrl:(NSString *)url
 {
     Contact *newContact = [NSEntityDescription
                            insertNewObjectForEntityForName:@"Contact"
@@ -61,6 +61,8 @@
     [self saveContext];
     
     [_contacts addObject:(Contact*)newContact];
+    NSInteger index = [_contacts count] - 1;
+    return index;
 }
 
 -(void)changeContact:(Contact*) contact

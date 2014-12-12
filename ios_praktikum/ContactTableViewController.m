@@ -43,10 +43,10 @@
     [self performSegueWithIdentifier:@"addContact" sender:self];
 }
 
--(void)saveContact:(NSString *)firstname withLastname:(NSString *)lastname andMail:(NSString *)mail
+-(Contact*)saveContact:(NSString *)firstname withLastname:(NSString *)lastname andMail:(NSString *)mail
             andUrl:(NSString *)url
 {
-    [_contactManager addContact:firstname withLastname:lastname andMail:mail andUrl:url];
+    return [_contactManager getContact:[_contactManager addContact:firstname withLastname:lastname andMail:mail andUrl:url]];
 }
 
 -(void)changeContact:(Contact *)contact
