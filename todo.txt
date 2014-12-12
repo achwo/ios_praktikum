@@ -1,3 +1,8 @@
-- Edit Contact
-- Load Database Data in Table View (startup)
-- Load Contact Data into Edit Contact
+- move string constants to AppConstants.h
+- load image on save click
+- prohibit saving duplicats
+- translate
+- save toggle state permanently?
+- spinner while downloading image
+
+- cleanups

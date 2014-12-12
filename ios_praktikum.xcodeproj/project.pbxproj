@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		99912BEA8EE17EC068083DDC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C404C3130FE04442B902CD68 /* libPods.a */; };
+		DC06DA041A3B242400E57ED2 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC06DA031A3B242400E57ED2 /* todo.txt */; };
 		DC1BF6541A260AAF00247A0F /* ContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF6521A260AAF00247A0F /* ContactManager.m */; };
 		DC1BF6571A260FE600247A0F /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF6561A260FE600247A0F /* ContactTableViewController.m */; };
 		DC1BF65E1A26187A00247A0F /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1BF65D1A26187A00247A0F /* ContactTableViewCell.m */; };
@@ -38,6 +39,7 @@
 		C404C3130FE04442B902CD68 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AC3C153499A18888C8E47B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D2E62583A15194E9B4D0E135 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DC06DA031A3B242400E57ED2 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		DC1BF6511A260AAF00247A0F /* ContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactManager.h; sourceTree = "<group>"; };
 		DC1BF6521A260AAF00247A0F /* ContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactManager.m; sourceTree = "<group>"; };
 		DC1BF6551A260FE600247A0F /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		DC6C71BC1A2608410075E20F = {
 			isa = PBXGroup;
 			children = (
+				DC06DA031A3B242400E57ED2 /* todo.txt */,
 				DC6C71C71A2608410075E20F /* ios_praktikum */,
 				DC6C71E41A2608410075E20F /* ios_praktikumTests */,
 				DC6C71C61A2608410075E20F /* Products */,
@@ -262,6 +265,7 @@
 				DC2395301A38748C00AA46BF /* Localizable.strings in Resources */,
 				DC6C71DC1A2608410075E20F /* LaunchScreen.xib in Resources */,
 				DC6C71D91A2608410075E20F /* Images.xcassets in Resources */,
+				DC06DA041A3B242400E57ED2 /* todo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
