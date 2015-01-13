@@ -14,6 +14,7 @@ NSString* const kMail = @"mail";
 NSString* const kUrl = @"url";
 NSString* const kAddContact = @"addContact";
 NSString* const kContact = @"contact";
+NSString* const kLocalImage = @"localImage";
 
 NSString* const kNSURLSession = @"NSURLSession";
 NSString* const kAFNetworking = @"AFNetworking";

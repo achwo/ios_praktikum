@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblMail;
 @property (weak, nonatomic) IBOutlet UILabel *lblUrl;
 @property (weak, nonatomic) IBOutlet UILabel *lblNetworkingFramework;
+@property (weak, nonatomic) IBOutlet UIButton *localImageButton;
 
 @end
 
@@ -52,6 +53,7 @@
     self.lblLastname.text = NSLocalizedString(kLastname, nil);
     self.lblMail.text = NSLocalizedString(kMail, nil);
     self.lblUrl.text = NSLocalizedString(kUrl, nil);
+    self.localImageButton.titleLabel.text = NSLocalizedString(kLocalImage, nil);
     
     self.navigationItem.title = NSLocalizedString(kContact, nil);
     self.navigationItem.rightBarButtonItem =

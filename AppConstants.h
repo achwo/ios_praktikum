@@ -14,6 +14,7 @@ FOUNDATION_EXPORT NSString* const kMail;
 FOUNDATION_EXPORT NSString* const kUrl;
 FOUNDATION_EXPORT NSString* const kAddContact;
 FOUNDATION_EXPORT NSString* const kContact;
+FOUNDATION_EXPORT NSString* const kLocalImage;
 
 FOUNDATION_EXPORT NSString* const kNSURLSession;
 FOUNDATION_EXPORT NSString* const kAFNetworking;
