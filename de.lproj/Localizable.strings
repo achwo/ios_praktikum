@@ -6,10 +6,10 @@
   Copyright (c) 2014 Felix Jensen. All rights reserved.
 */
 
-"firstname" = "!First Name";
-"lastname" = "!Last Name";
-"mail" = "!Mail";
-"url" = "!Image URL";
-"addContact" = "!Add Contact";
-"contact" = "!Contact";
-"localImage" = "!Local Image";
+"firstname" = "Vorname";
+"lastname" = "Nachname";
+"mail" = "Mail";
+"url" = "Bild URL";
+"addContact" = "Hinzufügen";
+"contact" = "Kontakt";
+"localImage" = "Lokales Bild";

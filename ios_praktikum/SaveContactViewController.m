@@ -53,7 +53,7 @@
     self.lblLastname.text = NSLocalizedString(kLastname, nil);
     self.lblMail.text = NSLocalizedString(kMail, nil);
     self.lblUrl.text = NSLocalizedString(kUrl, nil);
-    self.localImageButton.titleLabel.text = NSLocalizedString(kLocalImage, nil);
+    [self.localImageButton setTitle:NSLocalizedString(kLocalImage, nil) forState:UIControlStateNormal];
     
     self.navigationItem.title = NSLocalizedString(kContact, nil);
     self.navigationItem.rightBarButtonItem =
