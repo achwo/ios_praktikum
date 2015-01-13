@@ -18,7 +18,7 @@
 
 @end
 
-@interface SaveContactViewController : UIViewController<NSURLSessionDownloadDelegate>
+@interface SaveContactViewController : UIViewController<NSURLSessionDownloadDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *fieldFirstname;
 @property (weak, nonatomic) IBOutlet UITextField *fieldLastname;

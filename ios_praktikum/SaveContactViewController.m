@@ -29,6 +29,9 @@
     }
     
 }
+- (IBAction)clickPickImage:(id)sender {
+    [self initImagePicker];
+}
 
 - (IBAction)clickSave:(id)sender {
     
@@ -67,6 +70,21 @@
         
         [self loadImage:_contact.image];
     }
+
+}
+
+-(void)initImagePicker {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.delegate = self;
+    [self presentViewController:picker animated:YES completion:nil];
+    
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [_image setImage: image];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)loadImage:(NSString*)imageUrl {
