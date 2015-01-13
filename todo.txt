@@ -8,3 +8,5 @@
 Fragen
 
 - UIImagePicker... wie speichern wir das bild?
+- MapView... haben wir das richtig gemacht?
+- Was is falsch bei location services wenn ein neuer kontakt angelegt wird.

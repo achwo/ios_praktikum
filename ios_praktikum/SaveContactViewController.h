@@ -19,7 +19,7 @@
 
 @end
 
-@interface SaveContactViewController : UIViewController<NSURLSessionDownloadDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate>
+@interface SaveContactViewController : UIViewController<NSURLSessionDownloadDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *fieldFirstname;
 @property (weak, nonatomic) IBOutlet UITextField *fieldLastname;

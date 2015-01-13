@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblUrl;
 @property (weak, nonatomic) IBOutlet UILabel *lblNetworkingFramework;
 @property (weak, nonatomic) IBOutlet UIButton *localImageButton;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -64,17 +65,76 @@
     self.navigationItem.rightBarButtonItem =
     [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(clickSave:)];
     
-    if (_contact) {
-        _fieldFirstname.text = _contact.firstname;
-        _fieldLastname.text = _contact.lastname;
-        _fieldMail.text = _contact.mail;
-        _fieldUrl.text = _contact.image;
-        
-        [self loadImage:_contact.image];
+    if([self isNewContact]) {
+        [self locationStuff];
+    } else {
+        [self loadContact];
     }
     
-    
+//    if (_contact) {
+//        _fieldFirstname.text = _contact.firstname;
+//        _fieldLastname.text = _contact.lastname;
+//        _fieldMail.text = _contact.mail;
+//        _fieldUrl.text = _contact.image;
+//        
+//        [self loadImage:_contact.image];
+//
+//        // Todo: is this legit?
+//        CLLocationCoordinate2D coord = {.latitude =  53.55711037, .longitude =  10.02319515};
+//        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 500, 500);
+//        
+//        [_mapView setRegion:region];
+//
+//    } else {
+//        if (self.locationManager == nil)
+//        {
+//            self.locationManager = [[CLLocationManager alloc] init];
+//        }
+//        _locationManager.delegate = self;
+//        _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+//        _locationManager.distanceFilter = 500;
+//        [_locationManager startUpdatingLocation];
+//    }
+}
 
+-(Boolean) isNewContact {
+    return _contact == nil;
+}
+    
+-(void) loadContact {
+    _fieldFirstname.text = _contact.firstname;
+    _fieldLastname.text = _contact.lastname;
+    _fieldMail.text = _contact.mail;
+    _fieldUrl.text = _contact.image;
+    [self loadImage:_contact.image];
+    
+    // Todo: is this legit?
+    CLLocationCoordinate2D coord = {.latitude =  53.55711037, .longitude =  10.02319515};
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 500, 500);
+    
+    [_mapView setRegion:region];
+}
+
+-(void) locationStuff {
+    if (self.locationManager == nil)
+    {
+        self.locationManager = [[CLLocationManager alloc] init];
+    }
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    _locationManager.distanceFilter = 500;
+    [_locationManager startUpdatingLocation];
+}
+
+-(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation *location = [locations lastObject];
+    NSDate *locationDate = location.timestamp;
+    NSTimeInterval howRecent = [locationDate timeIntervalSinceNow];
+    if(abs(howRecent) < 10.0) {
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500);
+        [_mapView setRegion:region];
+        [_locationManager stopUpdatingLocation];
+    }
 }
 
 -(void)initImagePicker {
