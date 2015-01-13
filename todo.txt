@@ -1,8 +1,10 @@
 - move string constants to AppConstants.h
-- load image on save click
-- prohibit saving duplicats
-- translate
+- prohibit saving duplicates
 - save toggle state permanently?
 - spinner while downloading image
 
 - cleanups
+
+Fragen
+
+- UIImagePicker... wie speichern wir das bild?
