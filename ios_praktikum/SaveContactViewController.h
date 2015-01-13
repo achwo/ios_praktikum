@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ContactManager.h"
+#import <MapKit/MapKit.h>
 
 @class SaveContactViewController;
 
@@ -18,7 +19,7 @@
 
 @end
 
-@interface SaveContactViewController : UIViewController<NSURLSessionDownloadDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface SaveContactViewController : UIViewController<NSURLSessionDownloadDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *fieldFirstname;
 @property (weak, nonatomic) IBOutlet UITextField *fieldLastname;
@@ -26,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *fieldUrl;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UISwitch *toggleNetwork;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property(nonatomic, strong) id<SaveContactDelegate> delegate;
 @property(nonatomic, strong) Contact *contact;

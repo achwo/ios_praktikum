@@ -72,6 +72,8 @@
         
         [self loadImage:_contact.image];
     }
+    
+    
 
 }
 

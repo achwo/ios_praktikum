@@ -23,6 +23,8 @@
 		DC6C71E81A2608410075E20F /* ios_praktikumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C71E71A2608410075E20F /* ios_praktikumTests.m */; };
 		DC77A9681A387CC5005C5A07 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC77A9671A387CC5005C5A07 /* AppConstants.m */; };
 		DCB42CE01A38833100C82487 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB42CDF1A38833100C82487 /* Contact.m */; };
+		DCBC0F651A65526B009CB833 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBC0F641A65526B009CB833 /* MapKit.framework */; };
+		DCBC0F671A6552A1009CB833 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBC0F661A6552A1009CB833 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		DC77A9671A387CC5005C5A07 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConstants.m; path = ../AppConstants.m; sourceTree = "<group>"; };
 		DCB42CDE1A38833100C82487 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = ../Contact.h; sourceTree = "<group>"; };
 		DCB42CDF1A38833100C82487 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = ../Contact.m; sourceTree = "<group>"; };
+		DCBC0F641A65526B009CB833 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DCBC0F661A6552A1009CB833 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCBC0F671A6552A1009CB833 /* CoreLocation.framework in Frameworks */,
+				DCBC0F651A65526B009CB833 /* MapKit.framework in Frameworks */,
 				99912BEA8EE17EC068083DDC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +96,8 @@
 		71F9FD03227488E069682D57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCBC0F661A6552A1009CB833 /* CoreLocation.framework */,
+				DCBC0F641A65526B009CB833 /* MapKit.framework */,
 				C404C3130FE04442B902CD68 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -145,8 +153,8 @@
 				DC6C71D31A2608410075E20F /* SaveContactViewController.m */,
 				DC6C71D81A2608410075E20F /* Images.xcassets */,
 				DC6C71CF1A2608410075E20F /* ios_praktikum.xcdatamodeld */,
-				DC6C71DA1A2608410075E20F /* LaunchScreen.xib */,
 				DC6C71D51A2608410075E20F /* Main.storyboard */,
+				DC6C71DA1A2608410075E20F /* LaunchScreen.xib */,
 				DC6C71C81A2608410075E20F /* Supporting Files */,
 			);
 			path = ios_praktikum;
