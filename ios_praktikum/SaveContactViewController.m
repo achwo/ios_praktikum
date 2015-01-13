@@ -37,6 +37,8 @@
     
     [self downloadTaskWithUrl:_contact.image];
     
+    // todo: save local image
+    
     if(_contact) {
         _contact.firstname = _fieldFirstname.text;
         _contact.lastname = _fieldLastname.text;
@@ -93,6 +95,8 @@
     } else { // NSURlSession
         [self downloadTaskWithUrl:_contact.image];
     }
+    
+    // todo: if local image, load it and ignore url!
 }
 
 -(void)loadImageThroughAFNetworkingWithUrl:(NSString*)imageUrl {
