@@ -64,7 +64,9 @@
     self.navigationItem.title = NSLocalizedString(kContact, nil);
     self.navigationItem.rightBarButtonItem =
     [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(clickSave:)];
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
     if([self isNewContact]) {
         [self locationStuff];
     } else {
@@ -95,9 +97,9 @@
         self.locationManager = [[CLLocationManager alloc] init];
     }
     self.locationManager.delegate = self;
-    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
     {
-        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager requestAlwaysAuthorization];
     }
     
     self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
